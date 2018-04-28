@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="col s8 offset 2">
+            <h3 class="header center">CRUD OF USER</h3>
+
+            <ul class="collapsible popout">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">add_circle_outline</i>Insert Data</div>
+                    <div class="collapsible-body">
+                        <form>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Name</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Age</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Tel</label>
+                            </div>
+
+                        </form>
+                        <button class="btn waves-effect waves-light" type="button" name="action">Send
+                            <i class="material-icons right">send</i>
+                        </button>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">build</i>Update Data</div>
+                    <div class="collapsible-body">
+                        <form>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Name</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Age</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Tel</label>
+                            </div>
+
+                        </form>
+
+                        <button class="btn waves-effect waves-light" type="button" name="action">Update
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">contacts</i>Select All Data <span class="new badge red">4</span></div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+
+    </script>
+</body>
+
+</html>
