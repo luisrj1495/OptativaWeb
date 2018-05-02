@@ -20,25 +20,33 @@
                 <li>
                     <div class="collapsible-header"><i class="material-icons">add_circle_outline</i>Insert Data</div>
                     <div class="collapsible-body">
-                        <form>
+                        <form id="frmInsert">
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" type="text" class="validate" name="nameInput" >
                                 <label for="last_name">Name</label>
                             </div>
 
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" type="text" class="validate" name="ageInput" >
                                 <label for="last_name">Age</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" type="text" class="validate" name="telInput" >
                                 <label for="last_name">Tel</label>
                             </div>
 
+
                         </form>
-                        <button class="btn waves-effect waves-light" type="button" name="action">Send
+
+                        
+                            
+                        <button class="btn waves-effect waves-light" type="button" name="send" onClick="validateInputs(event, this)">Send
                             <i class="material-icons right">send</i>
                         </button>
+
+                        <div class="center" id="info"></div>
+
+                       
 
                     </div>
                 </li>
@@ -81,6 +89,7 @@
 
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/function.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
         $(document).ready(function() {
