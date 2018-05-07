@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body onload="countData()">
 
 
     <div class="container">
@@ -40,11 +40,11 @@
 
                         
                             
-                        <button class="btn waves-effect waves-light" type="button" name="send" onClick="validateInputs(event, this)">Send
+                        <button class="btn waves-effect waves-light" type="button" name="send" onClick="insertData(event, this)">Send
                             <i class="material-icons right">send</i>
                         </button>
 
-                        <div class="center" id="info"></div>
+                        <div class="center" id="infoSelect"></div>
 
                        
 
@@ -55,29 +55,52 @@
                     <div class="collapsible-body">
                         <form>
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input type="text"  id="idUpdate" onkeyup="return checkUser(event, this)" >
+                                <label for="idUpdate">Id</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="last_name" name="nameUpdate" type="text" class="validate">
                                 <label for="last_name">Name</label>
                             </div>
 
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" name="ageUpdate" type="text" class="validate">
                                 <label for="last_name">Age</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" name="telUpdate" type="text" class="validate">
                                 <label for="last_name">Tel</label>
                             </div>
 
                         </form>
 
-                        <button class="btn waves-effect waves-light" type="button" name="action">Update
+                        <button class="btn waves-effect waves-light" onclick="update(event, this)" type="button" name="update">Update
                             <i class="material-icons right">send</i>
                         </button>
+
+                        <div class="center" id="infoUpdate"></div>
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">contacts</i>Select All Data <span class="new badge red">4</span></div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header" id="selectAll" onclick="selectAll()"><i class="material-icons">contacts</i>Select All Data <span class="new badge red" id="counter" ></span></div>
+                    <div class="collapsible-body">
+                        <table class="centered responsive-table">
+                            <thead>
+                              <tr>
+                                  <th>Code</th>
+                                  <th>name</th>
+                                  <th>Tel</th>
+                                  <th>Age</th>
+                                  <th></th>
+                              </tr>
+                            </thead>
+                    
+                            <tbody id="tbody">
+                              
+                            </tbody>
+                          </table>
+                    </div>
                 </li>
             </ul>
 
